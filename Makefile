@@ -1,11 +1,11 @@
 .PHONY: clean
 
-IMAGES = $(addsuffix .png, $(basename $(wildcard *.openscad)))
+IMAGES = $(addsuffix .png, $(basename $(wildcard *.scad)))
 
 all: ${IMAGES}
 	@echo "finished generating images"
 
-%.png: %.openscad
+%.png: %.scad
 	openscad --render --viewall --autocenter -o $@ $<
 
 clean:
