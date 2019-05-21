@@ -1,6 +1,11 @@
 .PHONY: clean
 
-sphere.png: sphere.openscad
+IMAGES = $(addsuffix .png, $(basename $(wildcard *.openscad)))
+
+all: ${IMAGES}
+	@echo "finished generating images"
+
+%.png: %.openscad
 	openscad --render --viewall --autocenter -o $@ $<
 
 clean:
