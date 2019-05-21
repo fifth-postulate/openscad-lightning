@@ -1,0 +1,3 @@
+$fn=50;
+cylinder(h=20, r1=5, r2=0);
+rotate([45, 0, 0]) cylinder(h=20, r1=5, r2=0);
