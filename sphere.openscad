@@ -1,2 +1,2 @@
 $fn = 50;
-sphere(100);
+sphere();
